@@ -1,0 +1,51 @@
+<resources>
+    <string name="app_name">My First Med Kit</string>
+    <string name="app_version">Version 0.5.1</string>
+    <string name="welcome_info">Мои Наборы</string>
+    <string name="add_kit">Создание Аптечки</string>
+    <string name="update_kit">Изменение Аптечки</string>
+    <string name="name">Название</string>
+    <string name="add">Добавить</string>
+    <string name="delete">Удалить</string>
+    <string name="edit">Изменить</string>
+    <string name="add_medicament">Добавление Лекарства</string>
+    <string name="edit_medicament">Изменение Лекарства</string>
+    <string name="valid">Годен до:</string>
+    <string name="count">Количество:</string>
+    <string name="accept">Принять</string>
+    <string name="move">Переместить</string>
+    <string name="remained">Осталось</string>
+
+    <string name="is_expired">Истёк срок годности</string>
+    <!-- messege start -->
+    <string name="warning_count">К сожалению, у вас не осталось необходимого количества лекарства. </string>
+    <string name="warning_expiration_date">Не рекомендуется принимать лекарство, так как истек срок годности. </string>
+    <string name="warning_is_null">Поле не может быть пустым!</string>
+    <string name="warning_coincidence">Набор с таким именем уже существует!</string>
+    <!-- messege end -->
+
+    <!-- Setting start -->
+    <string name="setting">Настройки</string>
+    <string name="notification">Уведомления</string>
+
+    <string name="background_work">Частота выполнения фоновой работы:</string>
+    <string name="work_2_by_day">Два раза в день</string>
+    <string name="work_1_by_day">Раз в день</string>
+    <string name="work_1_by_2_day">Раз в два дня</string>
+    <string name="work_by_week">Раз в неделю</string>
+
+    <string name="dark_mode">Тёмная тема</string>
+    <!-- Setting end -->
+
+    <!-- Notification start-->
+    <string name="notification_is_expired_title">Истек срок годности лекарства</string>
+    <string name="notification_is_expired_one">Внимание! из набора "%1$s" истек срок годности у лекарства "%2$s".
+        Проверьте, пожалуйста, список и обновите необходимые препараты.</string>
+
+    <string name="notification_is_expired_two">Внимание! из набора "%1$s" истек срок годности у лекарств "%2$s".
+        Проверьте, пожалуйста, список и обновите необходимые препараты.</string>
+    <!-- Notification end-->
+
+    <string name="error_remained">Превышено Число Лекарств</string>
+
+</resources>

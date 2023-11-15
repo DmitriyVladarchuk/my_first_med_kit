@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/medicamentItemView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardElevation="8dp"
+    app:cardCornerRadius="50dp"
+    android:layout_marginTop="10dp"
+    android:layout_marginBottom="10dp"
+    android:layout_marginRight="10dp"
+    android:layout_marginLeft="10dp"
+    style="@style/main"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="100"
+        android:padding="10dp"
+        >
+
+        <ImageView
+            android:id="@+id/image_medicament"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/medication_48px"
+            android:layout_weight="70"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="30"
+            android:orientation="vertical"
+            >
+            <TextView
+                style="@style/textColor"
+                android:id="@+id/nameMedicament"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="monospace"
+                android:text="TErafly"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                />
+            <TextView
+                style="@style/textColor"
+                android:id="@+id/expirationDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="serif-monospace"
+                android:text="Годен до: 20.20.3060"
+                android:textSize="25sp"
+                />
+            <TextView
+                style="@style/textColor"
+                android:id="@+id/totalMedicament"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="serif-monospace"
+                android:text="Осталось: 20"
+                android:textSize="25sp"
+                />
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="light_green">#6c757d</color>
+    <color name="blue1">#3F51B5</color>
+    <color name="blue2">#2180F3</color>
+    <color name="red">#FF0000</color>
+    <color name="purple">#9C27B0</color>
+    <color name="crimson">#E91E63</color>
+
+    <!-- Night themes-->
+    <color name="mainColor">#222831</color>
+    <color name="secondaryColor1">#393e46</color>
+    <color name="secondaryColor2">#00adb5</color>
+    <color name="text">#eeeeee</color>
+
+</resources>

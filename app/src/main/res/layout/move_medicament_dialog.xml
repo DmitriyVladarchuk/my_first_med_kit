@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="305dp"
+    android:layout_height="305dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_gravity="center"
+    android:background="@drawable/dialog"
+    android:orientation="vertical"
+    style="@style/main">
+
+    <TextView
+        style="@style/textColor"
+        android:id="@+id/textMoveInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:gravity="center"
+        android:text="Terafly"
+        android:textStyle="bold"
+        android:textSize="25sp"
+        />
+
+    <Spinner
+        style="@style/textColor"
+        android:id="@+id/spinnerMove"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_gravity="center"
+        />
+
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"/>
+
+    <Button
+        style="@style/secondaryButton"
+        android:id="@+id/moveDialogButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
+        android:text="@string/move"
+        android:textSize="25sp"
+        android:fontFamily="serif-monospace"
+        android:layout_gravity="bottom"
+        android:foregroundGravity="bottom"
+        app:backgroundTint="@color/blue2"
+        />
+
+</LinearLayout>

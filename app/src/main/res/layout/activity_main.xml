@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:layout_gravity="center_horizontal"
+    android:orientation="vertical"
+    style="@style/secondary1"
+    >
+
+    <TextView
+        android:id="@+id/mainText"
+        style="@style/textColor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="monospace"
+        android:layout_centerHorizontal="true"
+        android:text="@string/welcome_info"
+        android:textSize="35sp"
+        android:textStyle="bold" />
+
+    <ImageButton
+        android:onClick="openSetting"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="13dp"
+        android:layout_margin="20dp"
+        android:layout_toEndOf="@+id/mainText"
+
+        app:strokeWidth="0dp"
+        android:elevation="0dp"
+
+        android:src="@drawable/settings_24"
+        android:background="@null"
+        style="@style/settingButton"
+        tools:ignore="UseAppTint"
+        android:contentDescription="TODO" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_kit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/mainText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp" />
+
+
+</RelativeLayout>

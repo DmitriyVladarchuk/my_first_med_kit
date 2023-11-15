@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SettingActivity">
+
+    <Button
+        android:id="@+id/buttonBackSetting"
+        style="@style/buttonBack"
+        android:onClick="backSetting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:elevation="0dp"
+        android:fontFamily="monospace"
+
+        android:text="@string/setting"
+        android:textAlignment="viewStart"
+        android:textAllCaps="false"
+
+        android:textSize="20sp"
+        app:cornerRadius="10dp"
+        app:icon="@drawable/back_24"
+        app:iconSize="24dp"
+        />
+
+    <androidx.cardview.widget.CardView
+        style="@style/main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/buttonBackSetting"
+        android:layout_margin="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        app:cardCornerRadius="30dp"
+        app:cardElevation="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <Button
+                android:id="@+id/buttonNotification"
+                style="@style/buttonBottomSheet"
+                android:onClick="openNotification"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/notification"
+                android:textAlignment="viewStart"
+                android:textSize="16sp" />
+
+            <com.google.android.material.divider.MaterialDivider
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="5dp"
+                app:dividerColor="@color/light_green" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/background_work"
+                android:layout_marginStart="20dp"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                />
+
+            <RadioGroup
+                android:id="@+id/background_work_group"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp">
+
+                <RadioButton
+                    android:id="@+id/rb_but_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="@string/work_2_by_day"
+                    android:textSize="16sp"
+                    app:buttonTint="@color/blue2"
+                    />
+
+                <RadioButton
+                    android:id="@+id/rb_but_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="@string/work_1_by_day"
+                    android:textSize="16sp"
+                    app:buttonTint="@color/blue2"
+                    />
+
+                <RadioButton
+                    android:id="@+id/rb_but_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="@string/work_1_by_2_day"
+                    android:textSize="16sp"
+                    app:buttonTint="@color/blue2"
+                    />
+
+                <RadioButton
+                    android:id="@+id/rb_but_4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="@string/work_by_week"
+                    android:textSize="16sp"
+                    app:buttonTint="@color/blue2"
+                    />
+
+            </RadioGroup>
+
+            <com.google.android.material.divider.MaterialDivider
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="5dp"
+                app:dividerColor="@color/light_green" />
+
+            <Switch
+                android:id="@+id/switchDarkMode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:minHeight="48dp"
+                android:text="@string/dark_mode"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:track="@drawable/track"
+                android:thumb="@drawable/thumb"
+                tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        style="@style/textColor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:text="@string/app_version"
+        android:layout_alignParentBottom="true"
+        android:gravity="center_horizontal"
+        android:layout_margin="10dp"
+        />
+
+</RelativeLayout>

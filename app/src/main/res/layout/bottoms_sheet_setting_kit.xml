@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/dialog_setting"
+    android:orientation="vertical"
+    style="@style/main">
+
+    <TextView
+        style="@style/textColor"
+        android:id="@+id/bottomSheetNameKit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Test"
+        android:textSize="30sp"
+        android:textAlignment="center"
+        android:fontFamily="monospace"
+        android:textStyle="bold"
+        android:layout_marginBottom="10dp"
+        android:elevation="6dp"/>
+
+    <Button
+        android:id="@+id/editKitButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/edit"
+        android:textSize="25sp"
+        android:fontFamily="monospace"
+        android:textAllCaps="false"
+        android:textAlignment="viewStart"
+
+        app:strokeWidth="0dp"
+        android:elevation="0dp"
+        app:cornerRadius="10dp"
+
+        app:iconSize="24dp"
+        app:icon="@drawable/edit_48px"
+        app:iconTint="@color/blue2"
+        style="@style/buttonBottomSheet"
+        app:iconPadding="20dp"
+
+        android:layout_marginBottom="10dp"
+        />
+
+    <Button
+        android:id="@+id/deleteKitButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/delete"
+        android:textSize="25sp"
+        android:fontFamily="monospace"
+        android:textAllCaps="false"
+        android:textAlignment="viewStart"
+
+        app:strokeWidth="0dp"
+        android:elevation="0dp"
+        app:cornerRadius="10dp"
+
+        app:iconSize="24dp"
+        app:icon="@drawable/delete_48px"
+        app:iconTint="@color/red"
+        style="@style/buttonBottomSheet"
+        app:iconPadding="20dp"
+        android:layout_marginBottom="30dp"
+        />
+
+</LinearLayout>

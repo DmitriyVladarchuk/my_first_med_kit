@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MedicamentActivity"
+    android:orientation="vertical"
+    style="@style/secondary1"
+    >
+    <TextView
+        style="@style/textColor"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/nameKitInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="monospace"
+        android:textStyle="bold"
+        android:textSize="40sp"
+        android:text="Test Info"
+        android:gravity="center"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_medicament"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/nameKitInfo"
+        android:layout_marginTop="25dp"
+        android:paddingBottom="40dp"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/addMedicamentButton"
+        android:onClick="addMedicamentButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:backgroundTint="@color/blue2"
+        android:src="@drawable/plus"
+        app:tint="@android:color/white"
+        android:elevation="16dp"
+        android:contentDescription="add medicament"
+        />
+</RelativeLayout>
