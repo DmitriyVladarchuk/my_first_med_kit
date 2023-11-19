@@ -69,7 +69,7 @@ public class MainActivity extends AppCompatActivity {
         AppCompatDelegate.setDefaultNightMode(darkMode);
 
         setting = getSharedPreferences("background_work", MODE_PRIVATE);
-        backgroundWorkTime = setting.getInt("background_work", 30);
+        backgroundWorkTime = setting.getInt("background_work", 12);
 
         setting = getSharedPreferences("is_update_work", MODE_PRIVATE);
         boolean isUpdateWork = setting.getBoolean("is_update_work", false);
@@ -81,7 +81,7 @@ public class MainActivity extends AppCompatActivity {
                 .build();
 
         PeriodicWorkRequest testWork =
-                new PeriodicWorkRequest.Builder(MyWork.class, backgroundWorkTime, TimeUnit.MINUTES)
+                new PeriodicWorkRequest.Builder(MyWork.class, backgroundWorkTime, TimeUnit.HOURS)
                         .setConstraints(constraints)
                         .addTag("tag")
                         .build();
@@ -92,7 +92,6 @@ public class MainActivity extends AppCompatActivity {
             WorkManager.getInstance(this).enqueueUniquePeriodicWork("periodicNotification",
                     ExistingPeriodicWorkPolicy.REPLACE, testWork);
             // REPLACE - остановит текущию и запустит новую
-
             SharedPreferences.Editor prefEditor = setting.edit();
             prefEditor = setting.edit();
             prefEditor.putBoolean("is_update_work", false);

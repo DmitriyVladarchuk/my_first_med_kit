@@ -21,6 +21,10 @@ public class SettingActivity extends AppCompatActivity {
     private RadioButton radioBut2;
     private RadioButton radioBut3;
     private RadioButton radioBut4;
+    private int backgroundWorkTime1 = 12;
+    private int backgroundWorkTime2 = 24;
+    private int backgroundWorkTime3 = 48;
+    private int backgroundWorkTime4 = 168;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -69,21 +73,16 @@ public class SettingActivity extends AppCompatActivity {
             darkMode.setChecked(true);
 
         setting = getSharedPreferences("background_work", MODE_PRIVATE);
-        int backgroundWorkTime = setting.getInt("background_work", 30);
-        switch (backgroundWorkTime){
-            case 30:
-                radioBut1.setChecked(true);
-                break;
-            case 60:
-                radioBut2.setChecked(true);
-                break;
-            case 120:
-                radioBut3.setChecked(true);
-                break;
-            case 180:
-                radioBut4.setChecked(true);
-                break;
-        }
+        int valueBackgroundWorkTime = setting.getInt("background_work", backgroundWorkTime1);
+        if(valueBackgroundWorkTime == backgroundWorkTime1)
+            radioBut1.setChecked(true);
+        if(valueBackgroundWorkTime == backgroundWorkTime2)
+            radioBut2.setChecked(true);
+        if(valueBackgroundWorkTime == backgroundWorkTime3)
+            radioBut3.setChecked(true);
+        if(valueBackgroundWorkTime == backgroundWorkTime4)
+            radioBut4.setChecked(true);
+
     }
 
     private void updateValueBackgroundWork(){
@@ -91,28 +90,28 @@ public class SettingActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 SharedPreferences setting = getSharedPreferences("background_work", MODE_PRIVATE);
-                updateSettingBackground_Work(30);
+                updateSettingBackground_Work(backgroundWorkTime1);
             }
         });
 
         radioBut2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                updateSettingBackground_Work(60);
+                updateSettingBackground_Work(backgroundWorkTime2);
             }
         });
 
         radioBut3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                updateSettingBackground_Work(120);
+                updateSettingBackground_Work(backgroundWorkTime3);
             }
         });
 
         radioBut4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                updateSettingBackground_Work(180);
+                updateSettingBackground_Work(backgroundWorkTime4);
             }
         });
     }
